@@ -9,9 +9,8 @@ class SongList extends Component {
     this.props
       .mutate({
         variables: { id },
-        refetchQueries: [{ query: fetchSongsQuery }],
       })
-      .then(() => hashHistory.push("/"));
+      .then(this.props.data.refetch());
   }
 
   renderSongs() {
