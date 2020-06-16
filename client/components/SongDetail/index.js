@@ -7,6 +7,7 @@ import LyricCreate from "../LyricCreate/index";
 class SongDetail extends Component {
   render() {
     const { song } = this.props.data;
+    console.log(song);
 
     if (!song) {
       return <h3>Loading...</h3>;
@@ -16,7 +17,7 @@ class SongDetail extends Component {
       <div>
         <Link to="/">Back</Link>
         <h3>{song.title}</h3>
-        <LyricCreate />
+        <LyricCreate songId={song.id} />
       </div>
     );
   }
