@@ -8,7 +8,6 @@ import LyricList from "../LyricList/index";
 class SongDetail extends Component {
   render() {
     const { song } = this.props.data;
-    console.log(song);
 
     if (!song) {
       return <h3>Loading...</h3>;
